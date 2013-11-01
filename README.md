@@ -4,18 +4,30 @@
 Using a vanilla centos 6.4 image, create a puppet manifest that mirrors the configuration of the web and DB servers at PSU.
 ##Install
 Install Vagrant and Virtual Box (this should be available on ARC computers)
-Create local directory such as "centos64-puppet" and clone essentail files
-<pre><code>mkdir centos64-puppet
-cd centos64-puppet/
-git clone https://github.com/suns3t/puppet-manifest.git
+
+Notice: If you are running VirtualBox on Mac OS X. You restart Virtual Box by running the command below
+<pre><code>sudo /Library/StartupItems/VirtualBox/VirtualBox restart
+</code></pre>
+
+Clone git directory and cd into puppet-manifest folder
+<pre><code>git clone https://github.com/suns3t/puppet-manifest.git
+cd puppet-manifest
 </code></pre>
 Run Vagrant and start provisioning (this step will take about one hour)
 <pre><code>vagrant up --provision
 </code></pre>
-##Troubleshoot
-If you run into the error of executing 'VBoxManage' when start up Vagrant box, run the command below to restart VBoxManager
-<pre><code>sudo /Library/StartupItems/VirtualBox/VirtualBox restart
-</code></pre>
+
+##Usage
+To make sure it work, go to your browser and type 10.0.0.10
+
+To ssh into Vagrant machine, type
+<pre><code>vagrant ssh</code></pre>
+
+Vagrant machine does not have root password, so to become sudoer, type
+<pre><code>sudo su</code></pre>
+
+If Apache is not running, restart it
+<pre><code>service httpd restart</code></pre>
 ##Contact
 Contact information will go here!
 
