@@ -12,58 +12,58 @@ class vim {
 	}
         
 	# Create directory and files
-        file { '/home/vagrant/.vim':
+        file { '/root/.vim':
            ensure => 'directory',
            group  => '501',
            mode   => '755',
            owner  => '501',
         }
-        file { '/home/vagrant/.vimrc':
+        file { '/root/.vimrc':
            ensure  => 'file',
            source => 'puppet:///modules/vim/.vimrc',
            group   => '501',
            mode    => '644',
            owner   => '501',
         }
-        file { '/home/vagrant/.vim/backup':
+        file { '/root/.vim/backup':
           ensure => 'directory',
           group  => '501',
           mode   => '755',
           owner  => '501',
         }
-        file { '/home/vagrant/.vim/colors':
+        file { '/root/.vim/colors':
           ensure => 'directory',
           group  => '501',
           mode   => '755',
           owner  => '501',
         }
-        file { '/home/vagrant/.vim/colors/wombat256mod.vim':
+        file { '/root/.vim/colors/wombat256mod.vim':
           ensure  => 'file',
           source => 'puppet:///modules/vim/.vim/colors/wombat256mod.vim',
           group   => '501',
           mode    => '644',
           owner   => '501',
         }
-        file { '/home/vagrant/.vim/colors/zenburn.vim':
+        file { '/root/.vim/colors/zenburn.vim':
           ensure  => 'file',
           source => 'puppet:///modules/vim/.vim/colors/zenburn.vim',
           group   => '501',
           mode    => '644',
           owner   => '501',
         }
-        file { '/home/vagrant/.vim/tmp':
+        file { '/root/.vim/tmp':
           ensure => 'directory',
           group  => '501',
           mode   => '755',
           owner  => '501',
         }
-        file { '/home/vagrant/.vim/undo':
+        file { '/root/.vim/undo':
           ensure => 'directory',
           group  => '501',
           mode   => '755',
           owner  => '501',
         }
-        file { '/home/vagrant/.vim/view':
+        file { '/root/.vim/view':
           ensure => 'directory',
           group  => '501',
           mode   => '755',
